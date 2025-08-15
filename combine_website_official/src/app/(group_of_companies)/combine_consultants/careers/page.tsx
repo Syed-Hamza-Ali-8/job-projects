@@ -18,9 +18,11 @@ export default function Career() {
           />
           <div className="z-10 px-4 text-center text-black">
             <h1 className="text-3xl sm:text-4xl font-bold">Careers</h1>
-            <p className="text-sm sm:text-base mt-2 max-w-3xl mx-auto">
-              Joining Combine requires a strong commitment to the company’s core
-              values and operational excellence.
+            <p className="text-gray-700 text-base sm:text-lg mb-4">
+              Joining Combine requires a strong commitment to the company&apos;s
+              core values and operational excellence. It&apos;s rewarding to be
+              part of a team that shares common values and works towards a
+              common goal.
             </p>
           </div>
         </div>
@@ -31,9 +33,10 @@ export default function Career() {
             COMBINE CONSULTANTS CAREERS
           </h2>
           <p className="text-gray-700 text-base sm:text-lg mb-4">
-            Joining Combine requires a strong commitment to the company's core
-            values and operational excellence. It's rewarding to be part of a
-            team that shares common values and works towards a common goal.
+            Joining Combine requires a strong commitment to the company&apos;s
+            core values and operational excellence. It&apos;s rewarding to be
+            part of a team that shares common values and works towards a common
+            goal.
           </p>
           <p className="text-gray-700 text-base sm:text-lg mb-6">
             Our organization prides itself on a robust business culture that is

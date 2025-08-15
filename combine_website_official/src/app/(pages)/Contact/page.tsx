@@ -2,6 +2,7 @@
 import React from "react";
 import { MapPin, Phone, Smartphone, Mail, Building2 } from "lucide-react";
 import Navbar from "@/app/components/Navbar";
+import Image from "next/image";
 
 const page = () => {
   return (
@@ -85,10 +86,11 @@ const page = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left image + text */}
             <div className="relative w-full h-full">
-              <img
+              <Image
                 src="/ContactPage/contact-image.png"
                 alt="Contact visual"
-                className="w-full h-full object-cover rounded-md shadow-md"
+                fill
+                className="object-cover rounded-md shadow-md"
               />
               <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white text-center p-6">
                 <h2 className="text-4xl md:text-5xl font-extrabold">

@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/app/components/Navbar";
+import Image from "next/image";
 
 const images = [
   {
@@ -85,11 +86,15 @@ const page = () => {
                 variants={fadeIn}
                 className="relative group rounded-xl overflow-hidden shadow-lg"
               >
-                <img
-                  src={img.src}
-                  alt={img.title}
-                  className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
-                />
+                <div className="relative w-full h-72">
+                  <Image
+                    src={img.src}
+                    alt={img.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105 group-hover:brightness-110"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 flex items-end p-4">
                   <p className="text-white text-lg font-semibold drop-shadow">
                     {img.title}

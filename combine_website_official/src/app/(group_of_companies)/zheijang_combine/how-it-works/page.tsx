@@ -118,10 +118,12 @@ const HowItWorks = () => {
 
       {/* What's Included Section */}
       <section className="max-w-6xl mx-auto px-4 py-10">
-        <h2 className="text-xl font-bold uppercase mb-4">What's Included?</h2>
+        <h2 className="text-xl font-bold uppercase mb-4">
+          What&apos;s Included?
+        </h2>
         <p className="text-sm leading-6 mb-6">
           Outline your textile products or services to communicate the benefits
-          of choosing your company for customers’ textile needs.
+          of choosing your company for customers&apos; textile needs.
         </p>
 
         <div className="grid sm:grid-cols-2 gap-4">

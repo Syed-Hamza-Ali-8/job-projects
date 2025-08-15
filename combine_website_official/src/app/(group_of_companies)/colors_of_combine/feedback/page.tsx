@@ -92,10 +92,12 @@ const Feedback = () => {
               </p>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <img
+                  <Image
                     src="/Group-of-Companies/colors-of-combine/feedback/christine.jpg"
                     alt="Christine Rose"
-                    className="w-24 h-24 rounded-full object-cover"
+                    width={96}
+                    height={96}
+                    className="rounded-full object-cover"
                   />
                   <div>
                     <h4 className="font-bold text-gray-800">Christine Rose</h4>
@@ -116,11 +118,14 @@ const Feedback = () => {
               </p>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <img
+                  <Image
                     src="/Group-of-Companies/colors-of-combine/feedback/katrina.jpg"
                     alt="Katrina Grace"
-                    className="w-24 h-24 rounded-full object-cover"
+                    width={96}
+                    height={96}
+                    className="rounded-full object-cover"
                   />
+
                   <div>
                     <h4 className="font-bold text-gray-800">Katrina Grace</h4>
                     <p className="text-sm text-gray-500">Farmer</p>
@@ -140,10 +145,12 @@ const Feedback = () => {
               </p>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <img
+                  <Image
                     src="/Group-of-Companies/colors-of-combine/feedback/jim.jpg"
                     alt="Jim Grace"
-                    className="w-24 h-24 rounded-full object-cover"
+                    width={96}
+                    height={96}
+                    className="rounded-full object-cover"
                   />
                   <div>
                     <h4 className="font-bold text-gray-800">Jim Grace</h4>

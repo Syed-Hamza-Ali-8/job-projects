@@ -84,7 +84,7 @@ export default function ProductsPage() {
       }, 700);
     }, 2500);
     return () => clearInterval(interval);
-  }, []);
+  }, [words.length]);
 
   return (
     <>

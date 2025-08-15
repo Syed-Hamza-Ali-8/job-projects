@@ -4,7 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import PakistanSupplyChain from "../Pakistan-Supply-Chain-Navbar";
 
-const page = () => {
+const EventGallery = () => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const galleryImages = [
@@ -122,4 +122,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default EventGallery;

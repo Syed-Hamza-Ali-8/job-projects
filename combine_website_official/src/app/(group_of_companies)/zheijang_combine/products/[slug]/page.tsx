@@ -244,7 +244,7 @@ export default function ProductDetail({
 
         {/* Specs */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
-          {Object.entries(product.specs).map(([key, value], i) => (
+          {Object.entries(product.specs).map(([key, value]) => (
             <div
               key={key}
               className="text-center border rounded-lg p-4 bg-white"

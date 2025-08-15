@@ -86,60 +86,62 @@ export default function OurExperts() {
           </div>
         </div>
 
-        <section className="py-10 px-4 sm:px-10 md:px-20 lg:px-28 bg-gray-50">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center text-center p-6 hover:shadow-xl transition"
-              >
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={260}
-                  height={260}
-                  className="rounded-full object-cover mb-4"
-                />
-                <h3 className="text-lg font-semibold text-gray-800">
-                  {member.name}
-                </h3>
-                <p className="text-sm text-gray-500 mb-4">
-                  {member.designation}
-                </p>
-                <div className="flex space-x-4 text-gray-400 text-xl">
-                  <Link
-                    href={member.facebook}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaFacebookF className="hover:text-[#1877f2] transition-colors duration-300" />
-                  </Link>
-                  <Link
-                    href={member.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaXTwitter className="hover:text-black transition-colors duration-300" />
-                  </Link>
-                  <Link
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaLinkedinIn className="hover:text-[#0077b5] transition-colors duration-300" />
-                  </Link>
-                  <Link
-                    href={member.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaInstagram className="hover:text-[#e1306c] transition-colors duration-300" />
-                  </Link>
+        {showPeople && (
+          <section className="py-10 px-4 sm:px-10 md:px-20 lg:px-28 bg-gray-50">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8">
+              {teamMembers.map((member, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col items-center text-center p-6 hover:shadow-xl transition"
+                >
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={260}
+                    height={260}
+                    className="rounded-full object-cover mb-4"
+                  />
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    {member.name}
+                  </h3>
+                  <p className="text-sm text-gray-500 mb-4">
+                    {member.designation}
+                  </p>
+                  <div className="flex space-x-4 text-gray-400 text-xl">
+                    <Link
+                      href={member.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaFacebookF className="hover:text-[#1877f2] transition-colors duration-300" />
+                    </Link>
+                    <Link
+                      href={member.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaXTwitter className="hover:text-black transition-colors duration-300" />
+                    </Link>
+                    <Link
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedinIn className="hover:text-[#0077b5] transition-colors duration-300" />
+                    </Link>
+                    <Link
+                      href={member.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaInstagram className="hover:text-[#e1306c] transition-colors duration-300" />
+                    </Link>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </section>
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </>
   );
