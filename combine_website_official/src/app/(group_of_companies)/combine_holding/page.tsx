@@ -11,8 +11,8 @@ const CombineHolding = () => {
       <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] bg-gray-900 flex items-center justify-center overflow-hidden font-montserrat">
         {/* Background Image */}
         <Image
-          src="/Group-of-Companies/combine-holding/combine-holding-banner.jpeg"
-          alt="Zhejiang Combine Banner"
+          src="/Group-of-Companies/combine-holding/combine-holding-banner.png"
+          alt="Combine Holding Banner"
           fill
           className="object-cover opacity-60"
           priority
