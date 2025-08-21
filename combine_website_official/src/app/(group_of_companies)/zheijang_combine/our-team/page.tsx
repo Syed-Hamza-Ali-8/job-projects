@@ -126,7 +126,6 @@ const OurTeamPage = () => {
       linkedin: "https://linkedin.com/in/amin",
       instagram: "https://instagram.com/amin",
     },
-    // Add 11 more objects here
   ];
 
   useEffect(() => {
@@ -135,6 +134,7 @@ const OurTeamPage = () => {
     }, 2500); // change every 2.5 seconds
     return () => clearInterval(interval);
   }, []);
+
   return (
     <>
       <ZhejiangNavbar />

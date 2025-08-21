@@ -3,7 +3,7 @@
 import Navbar from "@/app/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
-import { FaBullseye, FaEye } from "react-icons/fa"; // ✅ Imported icons
+import { FaBullseye, FaEye } from "react-icons/fa";
 import { FiMic } from "react-icons/fi";
 
 export default function AboutPage() {
@@ -207,7 +207,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative w-full h-[50vh] bg-[url('/AboutPage/about-us-image.png')] bg-cover bg-center flex flex-col items-center justify-center text-center">
+      <section className="relative w-full h-[50vh] bg-[url('/ContactPage/contact-us.png')] bg-cover bg-center flex flex-col items-center justify-center text-center">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent z-0" />
 
         <h1 className="z-10 text-4xl md:text-6xl text-white font-extrabold font-[Montserrat] drop-shadow-lg">

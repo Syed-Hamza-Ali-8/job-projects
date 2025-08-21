@@ -3,39 +3,48 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/app/components/Navbar";
 import Image from "next/image";
+import Link from "next/link"; // ✅ Import Link
 
 const images = [
   {
     src: "/GroupEvents/combine-plastic-event-image.jpg",
     title: "Combine Plastic Event",
+    href: "/combine_plastic/event-gallery",
   },
   {
     src: "/GroupEvents/zhejiang-combine-event-gallery.jpg",
     title: "Zheijang Combine Event",
+    href: "/zheijang_combine/event-gallery",
   },
   {
     src: "/GroupEvents/pakistan-supply-chain-event.jpeg",
     title: "Pakistan Supply Chain Event",
+    href: "/pakistan_supply_chain/event-gallery",
   },
   {
     src: "/GroupEvents/combine-foundation-images.jpg",
     title: "Combine Foundation Event",
+    href: "/combine_foundation/initiatives",
   },
   {
     src: "/GroupEvents/combine-team-trip-event.jpeg",
     title: "Team Trip",
+    href: "/events/team-trip",
   },
   {
     src: "/GroupEvents/combine-karwan-e-rozqar-event.jpg",
     title: "Karwan-e-Rozgar Karachi",
+    href: "/events/karwan-e-rozgar",
   },
   {
     src: "/GroupEvents/combine-consultants-contract-event-images-1.jpg",
     title: "Combine Consultant Event 1",
+    href: "/events/consultants-1",
   },
   {
     src: "/GroupEvents/combine-consultants-event-images-2.jpg",
     title: "Combine Consultant Event 2",
+    href: "/events/consultants-2",
   },
 ];
 
@@ -58,7 +67,7 @@ const page = () => {
       <Navbar />
       <div>
         {/* Hero Section */}
-        <section className="relative w-full h-[50vh] bg-[url('/AboutPage/about-us-image.png')] bg-cover bg-center flex flex-col items-center justify-center text-center">
+        <section className="relative w-full h-[50vh] bg-[url('/GroupEvents/group-events-banner.png')] bg-cover bg-center flex flex-col items-center justify-center text-center">
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent z-0" />
           <h1 className="z-10 text-4xl md:text-6xl text-white font-extrabold font-[Montserrat] drop-shadow-lg">
             GROUP EVENTS
@@ -96,9 +105,13 @@ const page = () => {
                   />
                 </div>
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors duration-300 flex items-end p-4">
-                  <p className="text-white text-lg font-semibold drop-shadow">
+                  {/* ✅ Title is now a Link */}
+                  <Link
+                    href={img.href}
+                    className="text-white text-lg font-semibold drop-shadow hover:underline"
+                  >
                     {img.title}
-                  </p>
+                  </Link>
                 </div>
               </motion.div>
             ))}

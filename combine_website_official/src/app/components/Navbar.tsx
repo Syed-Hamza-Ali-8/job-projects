@@ -18,14 +18,8 @@ const companies = [
     name: "Zheijang Combine",
     pages: ["Our Team", "Products", "How it Works", "Event Gallery"],
   },
-  {
-    name: "Combine Holding",
-    pages: ["Our Team", "Products"],
-  },
-  {
-    name: "Combine Plastic",
-    pages: ["Our Team", "Products", "Event Gallery"],
-  },
+  { name: "Combine Holding", pages: ["Our Team", "Products"] },
+  { name: "Combine Plastic", pages: ["Our Team", "Products", "Event Gallery"] },
   {
     name: "Pakistan Supply Chain",
     pages: [
@@ -50,10 +44,7 @@ const companies = [
     name: "Colors of Combine",
     pages: ["Business Tree", "Agri Tourism Events", "Visit Us", "Feedback"],
   },
-  {
-    name: "Combine Foundation",
-    pages: ["Initiatives", "We Devote"],
-  },
+  { name: "Combine Foundation", pages: ["Initiatives", "We Devote"] },
   {
     name: "Blue Sky",
     pages: [
@@ -77,6 +68,8 @@ export default function Navbar() {
 
   const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
 
+  const pathname = usePathname();
+
   // Click outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -92,10 +85,8 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const pathname = usePathname();
-
+  // Close on route change
   useEffect(() => {
-    // Close mobile menu on route change
     setIsOpen(false);
     setShowDropdown(false);
     setHoveredCompany(null);
@@ -152,7 +143,7 @@ export default function Navbar() {
           </Link>
         </li>
 
-        {/* Group of Companies Dropdown */}
+        {/* Group of Companies */}
         <li
           className="relative"
           ref={dropdownRef}
@@ -178,7 +169,7 @@ export default function Navbar() {
             Group of Companies ▾
           </div>
 
-          {/* Second Level Dropdown */}
+          {/* Dropdown */}
           <ul
             className={`absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md py-2 w-64 z-50 transition-all duration-200 ${
               showDropdown
@@ -193,22 +184,31 @@ export default function Navbar() {
                 onMouseEnter={() => !isMobile && setHoveredCompany(idx)}
                 onMouseLeave={() => !isMobile && setHoveredCompany(null)}
               >
-                {/* Company List Item */}
-                <div
-                  className="flex justify-between items-center px-4 py-2 text-sm text-[#2E3237] hover:bg-[#003366] hover:text-white cursor-pointer"
-                  onClick={() => {
-                    if (isMobile) {
+                <div className="flex justify-between items-center px-4 py-2 text-sm text-[#2E3237] hover:bg-[#003366] hover:text-white">
+                  {/* Company name as link */}
+                  <Link
+                    href={`/${company.name.toLowerCase().replace(/\s+/g, "_")}`}
+                    className="flex-1"
+                  >
+                    {company.name}
+                  </Link>
+
+                  {/* Chevron for mobile expand */}
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
                       setOpenMobileSubMenu(
                         openMobileSubMenu === idx ? null : idx
                       );
-                    }
-                  }}
-                >
-                  {company.name}
-                  <FaChevronRight className="text-xs" />
+                    }}
+                    className="ml-2"
+                  >
+                    <FaChevronRight className="text-xs" />
+                  </button>
                 </div>
 
-                {/* Third Level Dropdown - Desktop */}
+                {/* Desktop subpages */}
                 {!isMobile && hoveredCompany === idx && (
                   <ul className="absolute top-0 left-full ml-1 w-48 bg-white shadow-lg rounded-md z-50">
                     {company.pages.map((page, pageIdx) => (
@@ -219,7 +219,7 @@ export default function Navbar() {
                             .replace(/\s+/g, "_")}/${page
                             .toLowerCase()
                             .replace(/\s+/g, "-")}`}
-                          className="block px-4 py-2 text-sm text-[#2E3237] hover:bg-[#003366] hover:text-white transition-colors"
+                          className="block px-4 py-2 text-sm text-[#2E3237] hover:bg-[#003366] hover:text-white"
                         >
                           {page}
                         </Link>
@@ -228,7 +228,7 @@ export default function Navbar() {
                   </ul>
                 )}
 
-                {/* Third Level Dropdown - Mobile */}
+                {/* Mobile subpages */}
                 {isMobile && openMobileSubMenu === idx && (
                   <ul className="ml-4 bg-[#f9f9f9] border-l border-gray-300">
                     {company.pages.map((page, pageIdx) => (
@@ -239,7 +239,7 @@ export default function Navbar() {
                             .replace(/\s+/g, "_")}/${page
                             .toLowerCase()
                             .replace(/\s+/g, "-")}`}
-                          className="block px-4 py-2 text-sm text-[#2E3237] hover:bg-[#003366] hover:text-white transition-colors"
+                          className="block px-4 py-2 text-sm text-[#2E3237] hover:bg-[#003366] hover:text-white"
                         >
                           {page}
                         </Link>
@@ -263,7 +263,7 @@ export default function Navbar() {
           </Link>
         </li>
 
-        {/* Mobile Social Icons */}
+        {/* Mobile Social */}
         <div className="flex space-x-3 pt-2 lg:hidden">
           <a
             href="#"
@@ -286,7 +286,7 @@ export default function Navbar() {
         </div>
       </ul>
 
-      {/* Desktop Social Icons */}
+      {/* Desktop Social */}
       <div className="hidden lg:flex items-center space-x-2 md:space-x-3 mt-4 lg:mt-0">
         <a
           href="#"

@@ -10,7 +10,7 @@ const page = () => {
       <Navbar />
       <div className="bg-[#f9f9ff] text-gray-800">
         {/* Hero Section */}
-        <section className="relative w-full h-[50vh] bg-[url('/AboutPage/about-us-image.png')] bg-cover bg-center flex flex-col items-center justify-center text-center">
+        <section className="relative w-full h-[50vh] bg-[url('/ContactPage/contact-us.png')] bg-cover bg-center flex flex-col items-center justify-center text-center">
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent z-0" />
           <h1 className="z-10 text-4xl md:text-6xl text-white font-extrabold font-[Montserrat] drop-shadow-lg">
             CONTACT US

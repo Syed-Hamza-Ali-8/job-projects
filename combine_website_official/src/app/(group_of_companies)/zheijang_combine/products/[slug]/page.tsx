@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 import ZhejiangNavbar from "../../Zheijang-Navbar";
 import { useCart } from "@/app/components/CartContext";
 
@@ -282,15 +283,16 @@ export default function ProductDetail({
       <div className="mt-6 mb-6 flex justify-center">
         <button
           className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700 transition cursor-pointer"
-          onClick={() =>
+          onClick={() => {
             addToCart({
               slug,
               name: product.name,
               price: product.priceRange,
               image: product.mainImage,
               quantity: 1,
-            })
-          }
+            });
+            toast.success(`${product.name} added to cart!`);
+          }}
         >
           Add to Cart
         </button>

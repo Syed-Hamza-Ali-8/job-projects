@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
 
-const CombineConsultant = () => {
+const CombineConsultantNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -163,4 +163,4 @@ const CombineConsultant = () => {
   );
 };
 
-export default CombineConsultant;
+export default CombineConsultantNavbar;
