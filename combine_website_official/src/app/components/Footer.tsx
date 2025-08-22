@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -6,10 +6,10 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <motion.footer 
-      initial={{ opacity: 0, y: 50 }} 
-      animate={{ opacity: 1, y: 0 }} 
-      transition={{ duration: 0.7 }} 
+    <motion.footer
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7 }}
       className="bg-black text-white px-6 py-10 text-center md:text-left"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
@@ -60,12 +60,12 @@ export default function Footer() {
 
       <div className="text-sm text-gray-400 flex flex-col md:flex-row justify-between items-center gap-2">
         <p>© Combine Group Pvt. Ltd. - {new Date().getFullYear()}</p>
-        <p>Maintained by WebnHostBIZ</p>
+        <p>Maintained by Team Of Combine</p>
       </div>
 
       {/* Scroll to top button */}
-      <a 
-        href="#top" 
+      <a
+        href="#top"
         className="fixed bottom-6 right-6 w-12 h-12 bg-blue-900 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg transition-all"
       >
         ↑
