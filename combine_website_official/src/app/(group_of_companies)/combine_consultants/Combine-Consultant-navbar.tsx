@@ -17,9 +17,9 @@ const CombineConsultantNavbar = () => {
         <Image
           src="/Group-of-Companies/combine-consultants/Combine-Consultants-logo.png"
           alt="Combine Logo"
-          width={200}
-          height={200}
-          className="w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] object-contain"
+          width={120}
+          height={40}
+          className="w-[100px] h-auto sm:w-[120px] md:w-[140px] object-contain"
         />
       </div>
 
