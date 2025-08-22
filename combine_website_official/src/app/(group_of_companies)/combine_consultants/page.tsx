@@ -18,6 +18,7 @@ import {
   Star,
 } from "lucide-react";
 import CombineConsultantNavbar from "./Combine-Consultant-navbar";
+import Link from "next/link";
 
 const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -70,13 +71,14 @@ const CombineConsultant: React.FC = () => {
             respective fields.
           </motion.p>
 
-          <motion.button
-            className="bg-[#024082] hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-300 cursor-pointer"
-            variants={fadeInUp}
-            custom={2}
-          >
-            Get Appointment
-          </motion.button>
+          <motion.div variants={fadeInUp} custom={2}>
+            <Link
+              href="/Contact"
+              className="inline-block bg-[#024082] hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-300 cursor-pointer"
+            >
+              Get Appointment
+            </Link>
+          </motion.div>
         </div>
       </motion.section>
 
@@ -268,14 +270,15 @@ const CombineConsultant: React.FC = () => {
                   "Combine consultants pvt. ltd. was a great help to our company. They helped us to identify and solve some of our most pressing problems.",
                 name: "Andi Lane",
                 company: "Quisque Tech",
-                avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+                avatar: "/Group-of-Companies/combine-consultants/andi-lane.jpg",
               },
               {
                 quote:
                   "We were very impressed with Combine consultants. They were very knowledgeable and experienced. We would definitely use them again in the future.",
                 name: "Olive Mathews",
                 company: "Lorem Fund",
-                avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+                avatar:
+                  "/Group-of-Companies/combine-consultants/olive-mathews.jpg",
               },
             ].map((t, i) => (
               <motion.div
@@ -300,9 +303,9 @@ const CombineConsultant: React.FC = () => {
                   <Image
                     src={t.avatar}
                     alt={t.name}
-                    width={48}
-                    height={48}
-                    className="rounded-full object-cover"
+                    width={80}
+                    height={80}
+                    className="rounded-full object-cover w-[70px] h-[70px] md:w-[80px] md:h-[80px]"
                   />
                   <div>
                     <h4 className="font-bold">{t.name}</h4>
