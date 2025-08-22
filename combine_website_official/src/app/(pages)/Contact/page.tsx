@@ -85,18 +85,18 @@ const page = () => {
         <section className="px-6 md:px-20 py-16 bg-[#eceeff]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left image + text */}
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-64 md:h-full">
               <Image
-                src="/ContactPage/contact-image.png"
+                src="/ContactPage/contact-section.avif"
                 alt="Contact visual"
                 fill
                 className="object-cover rounded-md shadow-md"
               />
               <div className="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-white text-center p-6">
-                <h2 className="text-4xl md:text-5xl font-extrabold">
+                <h2 className="text-2xl md:text-5xl font-extrabold">
                   Let us know what we can do for you!
                 </h2>
-                <p className="mt-4 text-lg font-light">
+                <p className="mt-2 md:mt-4 text-base md:text-lg font-light">
                   A good query can change your future
                 </p>
               </div>
