@@ -284,7 +284,7 @@ const Managements = () => {
         </section>
 
         {/* Subscription Section */}
-        <section className="relative bg-[#fcd4d2] py-12 px-4">
+        <section className="relative bg-[#e07c77] py-12 px-4">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             {/* Phone Image */}
             <div className="flex justify-center">
