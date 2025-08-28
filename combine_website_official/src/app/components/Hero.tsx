@@ -126,7 +126,7 @@ export default function Hero() {
 
             {/* single line instead of stacked number + caption */}
             <p className="text-2xl md:text-4xl font-semibold tracking-wide">
-              38&nbsp;Years&nbsp;of&nbsp;Excellence
+              27&nbsp;Years&nbsp;of&nbsp;Excellence
             </p>
           </div>
 

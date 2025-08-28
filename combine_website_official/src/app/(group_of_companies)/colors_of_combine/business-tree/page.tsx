@@ -8,9 +8,9 @@ import {
   FaInstagram,
 } from "react-icons/fa6";
 
-import ColorsOfCombine from "../Colors-of-Combine-Navbar";
 import Image from "next/image";
 import Link from "next/link";
+import ColorsOfCombineNavbar from "../Colors-of-Combine-Navbar";
 
 const BusinessTree = () => {
   const [showPeople, setShowPeople] = useState(true);
@@ -56,7 +56,7 @@ const BusinessTree = () => {
 
   return (
     <>
-      <ColorsOfCombine />
+      <ColorsOfCombineNavbar />
       <div className="bg-white text-gray-800">
         {/* Banner Section */}
         <div className="relative w-full h-40 sm:h-48 md:h-56 bg-gray-900 flex items-center justify-center overflow-hidden">

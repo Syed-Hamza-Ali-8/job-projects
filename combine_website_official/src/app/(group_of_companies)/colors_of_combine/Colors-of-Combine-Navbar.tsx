@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
 
-const ColorsOfCombine = () => {
+const ColorsOfCombineNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -148,4 +148,4 @@ const ColorsOfCombine = () => {
   );
 };
 
-export default ColorsOfCombine;
+export default ColorsOfCombineNavbar;
