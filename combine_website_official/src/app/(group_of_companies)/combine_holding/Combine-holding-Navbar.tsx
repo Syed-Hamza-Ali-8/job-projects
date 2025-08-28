@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
+import { FiShoppingCart } from "react-icons/fi"; // import cart icon
 
 const CombineHoldingnavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const CombineHoldingnavbar = () => {
         isOpen ? "pb-4 md:pb-0" : "pb-0"
       }`}
     >
-      {/* Top row: Logo + Hamburger + Desktop Links */}
+      {/* Top row: Logo + Desktop Links + Hamburger/Cart */}
       <div className="flex items-center justify-between px-4 md:px-8 lg:px-16 py-4">
         {/* Logo */}
         <div className="flex items-center z-20">
@@ -28,15 +29,6 @@ const CombineHoldingnavbar = () => {
             className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"
           />
         </div>
-
-        {/* Hamburger Menu (mobile) */}
-        <button
-          className="md:hidden z-20 text-2xl text-[#003a7b]"
-          onClick={toggleMenu}
-          aria-label="Toggle Menu"
-        >
-          {isOpen ? <HiX /> : <HiMenu />}
-        </button>
 
         {/* Desktop Links */}
         <ul className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-4 lg:gap-8 text-[13px] sm:text-[14px] md:text-[15px] font-semibold items-center justify-center text-center">
@@ -67,6 +59,26 @@ const CombineHoldingnavbar = () => {
             </Link>
           </li>
         </ul>
+
+        {/* Right: Cart & Hamburger */}
+        <div className="flex items-center gap-4 z-20">
+          {/* Cart icon */}
+          <Link
+            href="/Cart"
+            className="text-2xl text-[#003a7b] hover:text-blue-800 transition"
+          >
+            <FiShoppingCart />
+          </Link>
+
+          {/* Hamburger */}
+          <button
+            className="md:hidden text-2xl text-[#003a7b]"
+            onClick={toggleMenu}
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? <HiX /> : <HiMenu />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -106,6 +118,16 @@ const CombineHoldingnavbar = () => {
               onClick={toggleMenu}
             >
               Contact
+            </Link>
+          </li>
+          {/* Optional: Cart link for mobile */}
+          <li>
+            <Link
+              href="/Cart"
+              className="text-[#003a7b] hover:text-blue-800 transition"
+              onClick={toggleMenu}
+            >
+              Cart
             </Link>
           </li>
         </ul>
