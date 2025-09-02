@@ -5,7 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
 import { useCart } from "@/app/components/CartContext";
-import CombineHoldingnavbar from "../../Combine-holding-Navbar";
+import CombinePlasticnavbar from "../../Combine-Plastic-Navbar";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -13,149 +13,116 @@ const fadeUp = {
 };
 
 const products = {
-  "plastic-agglomerator": {
-    name: "Plastic Agglomerator",
+  crusher: {
+    name: "Crusher",
     description:
-      "High-performance plastic agglomerator for recycling and manufacturing. Efficiently converts plastic scraps into reusable pellets with consistent quality.",
+      "Heavy-duty plastic crusher used to crush and break down plastic waste into smaller particles, making it suitable for recycling and further processing.",
     mainImage:
-      "/Group-of-Companies/combine-holding/products/combine-holding-plastic-agglomerator.png",
+      "/Group-of-Companies/combine-plastic/products/combine-plastic-washing-crusher.png",
     gallery: [
-      "/Group-of-Companies/combine-holding/products/combine-holding-plastic-agglomerator.png",
-      "/Group-of-Companies/combine-holding/products/combine-holding-plastic-agglomerator.png",
+      "/Group-of-Companies/combine-plastic/products/combine-plastic-washing-crusher.png",
     ],
     specs: {
       Capacity: "100-150 kg/h",
-      Power: "7.5 kW",
-      Material: "Stainless Steel",
-      Usage: "Plastic Recycling",
-    },
-  },
-  "washing-crusher": {
-    name: "Washing Crusher",
-    description:
-      "Durable washing crusher designed for cleaning and crushing plastic waste. Ensures uniform particle size for further processing in recycling lines.",
-    mainImage:
-      "/Group-of-Companies/combine-holding/products/combine-holding-washing-crusher.png",
-    gallery: [
-      "/Group-of-Companies/combine-holding/products/combine-holding-washing-crusher.png",
-    ],
-    specs: {
-      Capacity: "200-300 kg/h",
-      Motor: "5 kW",
-      Material: "Steel Alloy",
-      Usage: "Plastic Preprocessing",
+      Motor: "7.5 kW",
+      BladeMaterial: "Alloy Steel",
+      Usage: "Plastic Size Reduction",
     },
   },
   dewatering: {
-    name: "Dewatering",
+    name: "Dewatering Machine",
     description:
-      "Advanced dewatering system that efficiently removes moisture from washed plastics, improving drying efficiency and reducing energy consumption.",
+      "Industrial dewatering machine designed to remove moisture from washed plastic flakes, improving drying efficiency before extrusion or pelletizing.",
     mainImage:
-      "/Group-of-Companies/combine-holding/products/combine-holding-dewatering.png",
+      "/Group-of-Companies/combine-plastic/products/combine-holding-dewatering.png",
     gallery: [
-      "/Group-of-Companies/combine-holding/products/combine-holding-dewatering.png",
+      "/Group-of-Companies/combine-plastic/products/combine-holding-dewatering.png",
     ],
     specs: {
-      Capacity: "150-250 kg/h",
-      Material: "Stainless Steel",
-      Speed: "Variable",
+      Capacity: "200-300 kg/h",
+      Power: "5 kW",
+      Material: "Steel Alloy",
       Usage: "Plastic Drying",
     },
   },
   "die-head": {
     name: "Die Head",
     description:
-      "Precision die head for extrusion machines. Ensures uniform plastic flow and consistent product quality in the production line.",
+      "Precision-engineered die head used in extrusion machines to ensure consistent shape, smooth flow, and high-quality plastic output.",
     mainImage:
-      "/Group-of-Companies/combine-holding/products/combine-holding-die-hard-1.png",
+      "/Group-of-Companies/combine-plastic/products/combine-holding-die-hard.png",
     gallery: [
-      "/Group-of-Companies/combine-holding/products/combine-holding-die-hard-1.png",
+      "/Group-of-Companies/combine-plastic/products/combine-holding-die-hard.png",
     ],
     specs: {
-      Material: "High-Grade Steel",
-      Diameter: "50-100 mm",
+      Material: "Stainless Steel",
+      Diameter: "50-150 mm",
       Usage: "Plastic Extrusion",
-      Tolerance: "±0.1 mm",
+      Tolerance: "±0.05 mm",
     },
   },
-  "granule-cutter": {
-    name: "Granule Cutter",
+  "electric-heater": {
+    name: "Electric Heater",
     description:
-      "Robust granule cutter designed to convert plastic strands into uniform granules for further processing or packaging.",
+      "Durable electric heater used in extrusion and molding machines to maintain precise temperature control for consistent plastic processing.",
     mainImage:
-      "/Group-of-Companies/combine-holding/products/combine-holding-granule.png",
+      "/Group-of-Companies/combine-plastic/products/combine-plastic-electric-heater.png",
     gallery: [
-      "/Group-of-Companies/combine-holding/products/combine-holding-granule.png",
+      "/Group-of-Companies/combine-plastic/products/combine-plastic-electric-heater.png",
     ],
     specs: {
-      BladeMaterial: "Hardened Steel",
-      Capacity: "200-400 kg/h",
-      Motor: "3 kW",
-      Usage: "Plastic Granulation",
+      Material: "High-Grade Steel with Ceramic Insulation",
+      TemperatureRange: "0 - 400°C",
+      Power: "2 - 5 kW",
+      Usage: "Plastic Heating",
     },
   },
   rooter: {
-    name: "Rooter",
+    name: "Rooter Machine",
     description:
-      "Efficient rooter machine for smoothing and processing plastic pellets, ensuring consistent size and quality for downstream manufacturing.",
+      "Rooter machine designed to process and refine recycled plastic, ensuring uniform particle size and high-quality output for further production.",
     mainImage:
-      "/Group-of-Companies/combine-holding/products/combine-plastic-rooter.png",
+      "/Group-of-Companies/combine-plastic/products/combine-plastic-rooter.png",
     gallery: [
-      "/Group-of-Companies/combine-holding/products/combine-plastic-rooter.png",
+      "/Group-of-Companies/combine-plastic/products/combine-plastic-rooter.png",
     ],
     specs: {
       Capacity: "150-300 kg/h",
       Motor: "5 kW",
       Material: "Steel Alloy",
-      Usage: "Plastic Pellet Processing",
+      Usage: "Plastic Refining",
     },
   },
-  "iron-roll": {
-    name: "Iron Roll",
+  "vaccum-pump": {
+    name: "Vacuum Pump",
     description:
-      "Industrial iron roll for flattening and shaping plastic sheets. Provides uniform thickness and smooth surfaces for high-quality production.",
+      "Industrial vacuum pump used in plastic recycling systems to remove air, moisture, and gases, ensuring better processing and final product quality.",
     mainImage:
-      "/Group-of-Companies/combine-holding/products/combine-holding-iron-roll.png",
+      "/Group-of-Companies/combine-plastic/products/combine-plastic-vacuum-pump.png",
     gallery: [
-      "/Group-of-Companies/combine-holding/products/combine-holding-iron-roll.png",
+      "/Group-of-Companies/combine-plastic/products/combine-plastic-vacuum-pump.png",
     ],
     specs: {
-      RollLength: "2 m",
-      Diameter: "200 mm",
-      Material: "Cast Iron",
-      Usage: "Plastic Sheet Processing",
+      Capacity: "100-200 m³/h",
+      Power: "3 - 5 kW",
+      Material: "Cast Iron / Steel",
+      Usage: "Vacuum & Moisture Removal",
     },
   },
-  blade: {
-    name: "Blade",
+  inverter: {
+    name: "Inverter",
     description:
-      "High-precision blade for cutting and shaping plastic products. Made for durability and long-lasting performance in industrial settings.",
+      "Energy-efficient inverter for controlling the speed and power of motors in plastic recycling machines, reducing energy consumption and improving performance.",
     mainImage:
-      "/Group-of-Companies/combine-holding/products/combine-plastic-blade.png",
+      "/Group-of-Companies/combine-plastic/products/combine-plastic-inverter.png",
     gallery: [
-      "/Group-of-Companies/combine-holding/products/combine-plastic-blade.png",
+      "/Group-of-Companies/combine-plastic/products/combine-plastic-inverter.png",
     ],
     specs: {
-      Material: "Hardened Steel",
-      Length: "500 mm",
-      Thickness: "10 mm",
-      Usage: "Plastic Cutting",
-    },
-  },
-  "silicon-roll": {
-    name: "Silicon Roll",
-    description:
-      "Premium silicon roll for processing sensitive plastic or rubber materials. Offers high durability, heat resistance, and consistent surface quality.",
-    mainImage:
-      "/Group-of-Companies/combine-holding/products/combine-holding-silicon-roller.png",
-    gallery: [
-      "/Group-of-Companies/combine-holding/products/combine-holding-silicon-roller.png",
-    ],
-    specs: {
-      Diameter: "150 mm",
-      Material: "Silicon-Coated Steel",
-      Usage: "Plastic & Rubber Processing",
-      HeatResistance: "Up to 200°C",
+      InputVoltage: "220V / 380V",
+      PowerRange: "1.5 - 15 kW",
+      Control: "Variable Speed Drive",
+      Usage: "Motor Speed Control",
     },
   },
 };
@@ -177,7 +144,7 @@ export default function ProductDetail({
 
   return (
     <>
-      <CombineHoldingnavbar />
+      <CombinePlasticnavbar />
 
       <div className="max-w-6xl mx-auto px-4 py-10">
         {/* Title */}
@@ -276,6 +243,7 @@ export default function ProductDetail({
             addToCart({
               slug,
               name: product.name,
+              // price: product.priceRange,
               image: product.mainImage,
               quantity: 1,
             });

@@ -15,7 +15,6 @@ const fadeUp = {
 const products = {
   "courtrai-fabric": {
     name: "Courtrai Fabric",
-    priceRange: "PKR 2,500 - 4,000 / meter",
     description:
       "Courtrai Fabric is a premium cotton textile known for its softness, breathability, and versatility. Its natural fibers make it ideal for summer shirts, elegant dresses, and cozy home textiles, ensuring both comfort and style.",
     mainImage:
@@ -34,7 +33,6 @@ const products = {
   },
   "leather-fabric": {
     name: "Leather Fabric",
-    priceRange: "PKR 5,000 - 8,500 / meter",
     description:
       "High-grade synthetic leather with a realistic texture and soft touch. Designed for durability, it’s perfect for jackets, upholstery, handbags, and other fashion-forward applications.",
     mainImage:
@@ -52,7 +50,6 @@ const products = {
   },
   "mink-fabric": {
     name: "Mink Fabric",
-    priceRange: "PKR 6,000 - 9,500 / meter",
     description:
       "Luxuriously soft mink fabric with a rich texture that provides warmth and comfort. Ideal for blankets, winter coats, plush toys, and high-end upholstery.",
     mainImage:
@@ -70,7 +67,6 @@ const products = {
   },
   "fur-fabric": {
     name: "Fur Fabric",
-    priceRange: "PKR 7,000 - 10,500 / meter",
     description:
       "Artificial fur with a natural look and silky feel. Perfect for fashion coats, collars, costumes, and decorative projects, offering warmth and elegance without harming animals.",
     mainImage:
@@ -88,7 +84,6 @@ const products = {
   },
   "parachute-fabric": {
     name: "Parachute Fabric",
-    priceRange: "PKR 3,500 - 6,500 / meter",
     description:
       "Lightweight yet extremely durable parachute fabric, resistant to water and tearing. Perfect for outdoor gear, sportswear, tents, and protective covers.",
     mainImage:
@@ -106,7 +101,6 @@ const products = {
   },
   "spandex-fabric": {
     name: "Spandex Fabric",
-    priceRange: "PKR 4,000 - 7,500 / meter",
     description:
       "Stretchable and form-fitting spandex fabric, offering comfort and flexibility. Ideal for sportswear, dance costumes, leggings, and activewear.",
     mainImage:
@@ -124,7 +118,6 @@ const products = {
   },
   "taffeta-fabric": {
     name: "Taffeta Fabric",
-    priceRange: "PKR 4,500 - 8,000 / meter",
     description:
       "Crisp, smooth, and slightly shiny, taffeta fabric is perfect for gowns, evening dresses, and high-end decor. Its elegant drape adds sophistication to any creation.",
     mainImage:
@@ -142,7 +135,6 @@ const products = {
   },
   "vilor-fabric": {
     name: "Vilor Fabric",
-    priceRange: "PKR 5,000 - 8,500 / meter",
     description:
       "Soft and durable Vilor fabric, with a plush surface and vibrant colors. Excellent for upholstery, cushions, and decorative projects.",
     mainImage:
@@ -189,17 +181,6 @@ export default function ProductDetail({
         >
           {product.name}
         </motion.h1>
-
-        {/* Price */}
-        <motion.p
-          className="text-lg font-semibold text-green-700 mb-8"
-          initial="hidden"
-          animate="visible"
-          variants={fadeUp}
-          transition={{ delay: 0.1 }}
-        >
-          {product.priceRange}
-        </motion.p>
 
         {/* Images */}
         <motion.div className="flex flex-col lg:flex-row gap-6">
@@ -287,7 +268,6 @@ export default function ProductDetail({
             addToCart({
               slug,
               name: product.name,
-              price: product.priceRange,
               image: product.mainImage,
               quantity: 1,
             });

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 
 export default function CartPage() {
-  const { cart, removeFromCart, clearCart } = useCart();
+  const { cart, removeFromCart, clearCart, updateQuantity } = useCart();
 
   return (
     <>
@@ -22,19 +22,44 @@ export default function CartPage() {
                 key={`${item.slug || "no-slug"}-${index}`}
                 className="flex items-center gap-4 border-b pb-4 mb-4"
               >
+                {/* Product Image */}
                 <div className="relative w-20 h-20">
                   <Image
                     src={item.image}
                     alt={item.name}
                     fill
-                    className="object-cover"
+                    className="object-cover rounded"
                   />
                 </div>
+
+                {/* Product Info */}
                 <div className="flex-1">
                   <p className="font-semibold">{item.name}</p>
-                  <p className="text-gray-600">{item.price}</p>
-                  <p className="text-sm text-gray-500">Qty: {item.quantity}</p>
+
+                  {/* Quantity Controls */}
+                  <div className="flex items-center gap-2 mt-2">
+                    <button
+                      className="px-3 py-1 bg-gray-300 rounded hover:bg-gray-400"
+                      onClick={() =>
+                        updateQuantity(item.slug, item.quantity - 1)
+                      }
+                      disabled={item.quantity <= 1}
+                    >
+                      −
+                    </button>
+                    <span className="px-3">{item.quantity}</span>
+                    <button
+                      className="px-3 py-1 bg-gray-300 rounded hover:bg-gray-400"
+                      onClick={() =>
+                        updateQuantity(item.slug, item.quantity + 1)
+                      }
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
+
+                {/* Remove Button */}
                 <button
                   className="px-3 py-1 bg-red-500 text-white rounded hover:bg-red-600"
                   onClick={() => removeFromCart(item.slug)}
@@ -44,6 +69,7 @@ export default function CartPage() {
               </div>
             ))}
 
+            {/* Footer Buttons */}
             <div className="flex justify-between mt-6">
               <button
                 className="px-6 py-2 bg-gray-400 text-white rounded hover:bg-gray-500"

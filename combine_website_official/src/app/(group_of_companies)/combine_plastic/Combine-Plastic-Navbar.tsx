@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiMenu, HiX } from "react-icons/hi";
+import { FiShoppingCart } from "react-icons/fi"; // import cart icon
 
 const CombinePlasticnavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,16 +24,7 @@ const CombinePlasticnavbar = () => {
         />
       </div>
 
-      {/* Hamburger Menu Icon (visible on small screens) */}
-      <button
-        className="md:hidden z-20 text-2xl text-[#003a7b]"
-        onClick={toggleMenu}
-        aria-label="Toggle Menu"
-      >
-        {isOpen ? <HiX /> : <HiMenu />}
-      </button>
-
-      {/* Nav Links (Desktop) */}
+      {/* Center: Desktop Nav Links */}
       <ul className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-4 lg:gap-8 text-[13px] sm:text-[14px] md:text-[15px] font-semibold items-center justify-center text-center">
         <li>
           <Link href="/" className="hover:text-[#003a7b] transition">
@@ -69,6 +61,26 @@ const CombinePlasticnavbar = () => {
           </Link>
         </li>
       </ul>
+
+      {/* Right: Cart & Hamburger */}
+      <div className="flex items-center gap-4 z-20">
+        {/* Cart icon */}
+        <Link
+          href="/Cart"
+          className="text-2xl text-[#003a7b] hover:text-blue-800 transition"
+        >
+          <FiShoppingCart />
+        </Link>
+
+        {/* Hamburger Menu Icon (mobile only) */}
+        <button
+          className="md:hidden text-2xl text-[#003a7b]"
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+        >
+          {isOpen ? <HiX /> : <HiMenu />}
+        </button>
+      </div>
 
       {/* Mobile Menu (Dropdown) */}
       {isOpen && (
@@ -119,12 +131,19 @@ const CombinePlasticnavbar = () => {
                 Contact
               </Link>
             </li>
+            {/* Cart link for mobile */}
+            <li>
+              <Link
+                href="/Cart"
+                className="text-[#003a7b] hover:text-blue-800 transition"
+                onClick={toggleMenu}
+              >
+                Cart
+              </Link>
+            </li>
           </ul>
         </div>
       )}
-
-      {/* Invisible div for spacing */}
-      <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20"></div>
     </nav>
   );
 };

@@ -3,6 +3,7 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -26,24 +27,30 @@ export default function Footer() {
 
         {/* Socials with brand hover colors */}
         <div className="flex justify-center gap-6 text-2xl">
-          <a
-            href="#"
+          <Link
+            href="https://www.facebook.com/CombineGroup"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group p-2 rounded-full bg-[#003366] text-white hover:text-[#1877f2] transition-colors"
           >
             <FaFacebookF />
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="https://www.instagram.com/colorsofcombine/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group p-2 rounded-full bg-[#003366] text-white hover:text-[#E1306C] transition-colors"
           >
             <FaInstagram />
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="https://www.linkedin.com/company/combinegroup/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group p-2 rounded-full bg-[#003366] text-white hover:text-[#0A66C2] transition-colors"
           >
             <FaLinkedinIn />
-          </a>
+          </Link>
         </div>
 
         {/* Contact Info */}
@@ -64,12 +71,12 @@ export default function Footer() {
       </div>
 
       {/* Scroll to top button */}
-      <a
+      <Link
         href="#top"
         className="fixed bottom-6 right-6 w-12 h-12 bg-blue-900 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg transition-all"
       >
         ↑
-      </a>
+      </Link>
     </motion.footer>
   );
 }

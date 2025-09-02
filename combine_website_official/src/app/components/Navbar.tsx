@@ -265,47 +265,59 @@ export default function Navbar() {
 
         {/* Mobile Social */}
         <div className="flex space-x-3 pt-2 lg:hidden">
-          <a
-            href="#"
+          <Link
+            href="https://www.facebook.com/CombineGroup"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group p-2 rounded-full bg-[#003366] text-white"
           >
             <FaFacebookF size={18} className="group-hover:text-[#1877f2]" />
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="https://www.instagram.com/colorsofcombine/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group p-2 rounded-full bg-[#003366] text-white"
           >
             <FaInstagram size={18} className="group-hover:text-[#E1306C]" />
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="https://www.linkedin.com/company/combinegroup/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group p-2 rounded-full bg-[#003366] text-white"
           >
             <FaLinkedinIn size={18} className="group-hover:text-[#0A66C2]" />
-          </a>
+          </Link>
         </div>
       </ul>
 
       {/* Desktop Social */}
       <div className="hidden lg:flex items-center space-x-2 md:space-x-3 mt-4 lg:mt-0">
-        <a
-          href="#"
+        <Link
+          href="https://www.facebook.com/CombineGroup"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group p-2 md:p-2.5 rounded-full bg-[#003366] text-white"
         >
           <FaFacebookF size={18} className="group-hover:text-[#1877f2]" />
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          href="https://www.instagram.com/colorsofcombine/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group p-2 md:p-2.5 rounded-full bg-[#003366] text-white"
         >
           <FaInstagram size={18} className="group-hover:text-[#E1306C]" />
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          href="https://www.linkedin.com/company/combinegroup/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="group p-2 md:p-2.5 rounded-full bg-[#003366] text-white"
         >
           <FaLinkedinIn size={18} className="group-hover:text-[#0A66C2]" />
-        </a>
+        </Link>
       </div>
     </nav>
   );

@@ -11,7 +11,6 @@ import React, {
 type CartItem = {
   slug: string;
   name: string;
-  price: string;
   quantity: number;
   image: string;
 };
@@ -21,6 +20,7 @@ type CartContextType = {
   addToCart: (item: CartItem) => void;
   removeFromCart: (slug: string) => void;
   clearCart: () => void;
+  updateQuantity: (slug: string, newQuantity: number) => void; // ✅ added
 };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -63,9 +63,20 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   const clearCart = () => setCart([]);
 
+  // ✅ new updateQuantity function
+  const updateQuantity = (slug: string, newQuantity: number) => {
+    setCart((prev) =>
+      prev.map((item) =>
+        item.slug === slug
+          ? { ...item, quantity: Math.max(1, newQuantity) } // never below 1
+          : item
+      )
+    );
+  };
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, clearCart }}
+      value={{ cart, addToCart, removeFromCart, clearCart, updateQuantity }}
     >
       {children}
     </CartContext.Provider>
