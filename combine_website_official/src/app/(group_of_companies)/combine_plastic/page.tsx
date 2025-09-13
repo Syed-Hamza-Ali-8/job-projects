@@ -12,7 +12,7 @@ const CombinePlastic = () => {
       <CombinePlasticnavbar />
 
       {/* Banner */}
-      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] bg-gray-900 flex items-center justify-center overflow-hidden font-montserrat">
+      <div className="relative w-full h-[280px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-gray-900 flex items-center justify-center overflow-hidden font-montserrat">
         <Image
           src="/Group-of-Companies/combine-plastic/combine-plastic-banner.png"
           alt="Combine Plastic Banner"
@@ -28,20 +28,19 @@ const CombinePlastic = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="relative z-10 text-center px-4 max-w-3xl"
         >
-          <h1 className="text-2xl sm:text-4xl md:text-4xl font-bold text-white mb-4">
+          <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
             Combine Plastic
           </h1>
-          <p className="text-sm sm:text-5xl md:text-5xl font-bold text-white mb-2">
+          <p className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Combine Plastic & Engineering
           </p>
-          <br />
-          <p className="text-xs sm:text-2xl md:text-2xl font-bold text-white mb-6">
+          <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-white mb-6">
             Our professional team works to increase productivity and cost
             effectiveness on the market
           </p>
           <Link
             href="/Contact"
-            className="inline-block bg-[#024082] hover:bg-white hover:text-[#024082] transition-colors text-white font-semibold py-3 px-6 rounded-lg shadow-lg"
+            className="inline-block bg-[#024082] hover:bg-white hover:text-[#024082] transition-colors text-white font-semibold py-2 px-5 sm:py-3 sm:px-6 rounded-lg shadow-lg text-sm sm:text-base"
           >
             Contact Us
           </Link>
@@ -49,7 +48,7 @@ const CombinePlastic = () => {
       </div>
 
       {/* Two-column Section */}
-      <section className="bg-[#2B3F49] max-w-8xl mx-auto px-4 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8 font-montserrat">
+      <section className="bg-[#2B3F49] max-w-8xl mx-auto px-4 py-12 sm:py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8 font-montserrat">
         {/* Left Side */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -58,10 +57,10 @@ const CombinePlastic = () => {
           viewport={{ once: true, amount: 0.3 }}
           className="flex flex-col justify-center"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
             Reliable Engineering Takes Many Forms
           </h2>
-          <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-200">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-200">
             Our Combined Experience
           </p>
         </motion.div>
@@ -72,7 +71,7 @@ const CombinePlastic = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="flex flex-col justify-center text-gray-200 text-sm sm:text-xl md:text-lg"
+          className="flex flex-col justify-center text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl"
         >
           <p className="mb-4">
             More than two decades, Combine Plastic and Engineering started as a
@@ -89,8 +88,8 @@ const CombinePlastic = () => {
       </section>
 
       {/* Image Grid Section */}
-      <section className="relative max-w-7xl mx-auto px-4 py-16 md:py-24 font-montserrat">
-        <div className="-mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <section className="relative max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-24 font-montserrat">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {[
             "/Group-of-Companies/combine-plastic/project-img-5.jpg",
             "/Group-of-Companies/combine-plastic/project-img-3.jpg",
@@ -110,7 +109,7 @@ const CombinePlastic = () => {
                 alt={`Image ${i + 1}`}
                 width={500}
                 height={500}
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-48 sm:h-64 md:h-72 lg:h-80"
               />
             </motion.div>
           ))}
@@ -118,20 +117,26 @@ const CombinePlastic = () => {
       </section>
 
       {/* Services Section */}
-      <section className="max-w-7xl mx-auto px-4 py-16 md:py-24 grid grid-cols-1 md:grid-cols-3 gap-8 font-montserrat">
+      <section className="max-w-7xl mx-auto px-4 py-12 sm:py-16 md:py-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 font-montserrat">
         {[
           {
-            icon: <FaRecycle className="text-[#024082] w-12 h-12 mb-4" />,
+            icon: (
+              <FaRecycle className="text-[#024082] w-10 h-10 sm:w-12 sm:h-12 mb-4" />
+            ),
             title: "Recycling",
             desc: "Plastic recycling is a process that aims to convert waste plastic materials into reusable raw materials.",
           },
           {
-            icon: <FaTruck className="text-[#024082] w-12 h-12 mb-4" />,
+            icon: (
+              <FaTruck className="text-[#024082] w-10 h-10 sm:w-12 sm:h-12 mb-4" />
+            ),
             title: "Trading",
             desc: "Combine group is exploring new venues of trade i.e. Textile products, Agricultural produce, Plastic products.",
           },
           {
-            icon: <FaIndustry className="text-[#024082] w-12 h-12 mb-4" />,
+            icon: (
+              <FaIndustry className="text-[#024082] w-10 h-10 sm:w-12 sm:h-12 mb-4" />
+            ),
             title: "Manufacturing",
             desc: "Plastic recycling machines are tailor made to get result of crushed waste to recycle P.P, P.E, A.B.S & P.S etc.",
           },
@@ -145,7 +150,7 @@ const CombinePlastic = () => {
             className="flex flex-col items-center text-center p-6 border-2 border-[#024082] rounded-lg hover:shadow-lg transition"
           >
             {service.icon}
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">
               {service.title}
             </h3>
             <p className="text-gray-700 text-sm sm:text-base">{service.desc}</p>
@@ -154,17 +159,17 @@ const CombinePlastic = () => {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="max-w-8xl mx-auto px-4 py-16 md:py-24 font-montserrat">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Our Mission */}
+      <section className="max-w-8xl mx-auto px-4 py-12 sm:py-16 md:py-24 font-montserrat">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {/* Mission */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex flex-col justify-start h-full bg-gray-50 p-8 rounded-lg shadow-md"
+            className="bg-gray-50 p-6 sm:p-8 rounded-lg shadow-md"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-snug">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Our Mission
             </h2>
             <p className="text-gray-700 text-sm sm:text-base md:text-lg">
@@ -176,15 +181,15 @@ const CombinePlastic = () => {
             </p>
           </motion.div>
 
-          {/* Our Vision */}
+          {/* Vision */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="flex flex-col justify-start h-full bg-gray-50 p-8 rounded-lg shadow-md"
+            className="bg-gray-50 p-6 sm:p-8 rounded-lg shadow-md"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-snug">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Our Vision
             </h2>
             <p className="text-gray-700 text-sm sm:text-base md:text-lg">
@@ -197,7 +202,7 @@ const CombinePlastic = () => {
       </section>
 
       {/* Customers Trust Section */}
-      <div className="relative w-full h-[400px] sm:h-[500px] bg-gray-900 flex items-center justify-center overflow-hidden font-montserrat">
+      <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-gray-900 flex items-center justify-center overflow-hidden font-montserrat">
         <Image
           src="/Group-of-Companies/combine-plastic/contact-us.png"
           alt="Customers Trust"
@@ -209,19 +214,19 @@ const CombinePlastic = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true, amount: 0.3 }}
-          className="relative z-10 text-center px-6 max-w-4xl text-white"
+          className="relative z-10 text-center px-4 sm:px-6 max-w-4xl text-white"
         >
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-snug">
             All of Our Customers Trust <br /> Their Success To Us
           </h2>
-          <p className="text-sm sm:text-lg md:text-xl mb-6">
+          <p className="text-xs sm:text-sm md:text-lg lg:text-xl mb-6">
             C.P.E has won its customers continued trust by always providing them
             with a perfect solution to their specific requirements, and this has
             helped C.P.E to emerge as a market leader.
           </p>
           <Link
             href="/Contact"
-            className="inline-block bg-[#024082] hover:bg-white hover:text-[#024082] transition-colors text-white font-semibold py-3 px-8 rounded-lg shadow-lg"
+            className="inline-block bg-[#024082] hover:bg-white hover:text-[#024082] transition-colors text-white font-semibold py-2 px-5 sm:py-3 sm:px-8 rounded-lg shadow-lg text-sm sm:text-base"
           >
             Contact Us
           </Link>
