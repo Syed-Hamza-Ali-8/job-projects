@@ -80,14 +80,14 @@ const AgriTourismEvent = () => {
       <ColorsOfCombineNavbar />
       <div className="bg-white text-gray-800">
         {/* Banner Section */}
-        <div className="relative w-full h-40 sm:h-48 md:h-56 bg-gray-900 flex items-center justify-center overflow-hidden">
+        <div className="relative w-full h-64 sm:h-80 md:h-96 bg-gray-900 flex items-center justify-center overflow-hidden">
           <Image
-            src="/Group-of-Companies/combine-consultant/feedback-banner.jpg"
+            src="/Group-of-Companies/colors-of-combine/colors-of-combine-banner.jpg"
             alt="Feedback Banner"
             fill
             className="object-cover opacity-60"
           />
-          <div className="z-10 px-4 text-center text-black">
+          <div className="z-10 px-4 text-center text-white">
             <h1 className="text-3xl sm:text-4xl font-bold">
               Agri Tourism Events
             </h1>

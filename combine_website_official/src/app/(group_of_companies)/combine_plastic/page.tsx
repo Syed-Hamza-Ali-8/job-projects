@@ -14,7 +14,7 @@ const CombinePlastic = () => {
       {/* Banner */}
       <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] bg-gray-900 flex items-center justify-center overflow-hidden font-montserrat">
         <Image
-          src="/Group-of-Companies/combine-plastic/combine-plastic-banner.jpeg"
+          src="/Group-of-Companies/combine-plastic/combine-plastic-banner.png"
           alt="Combine Plastic Banner"
           fill
           className="object-cover opacity-60"
